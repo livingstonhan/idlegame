@@ -2,6 +2,7 @@
 #define __HELLOWORLD_SCENE_H__
 
 #include "cocos2d.h"
+#include "shootball.h"
 
 class HelloWorld : public cocos2d::Layer
 {
@@ -17,6 +18,13 @@ public:
     
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
+
+	void addballs(float dt); 
+	virtual void update(float delta);
+
+	Vec2 visibleSize;
+
+	Vector<shootball*> balls;
 };
 
 #endif // __HELLOWORLD_SCENE_H__
