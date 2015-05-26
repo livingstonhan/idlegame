@@ -22,9 +22,16 @@ public:
 	void addballs(float dt); 
 	virtual void update(float delta);
 
-	Vec2 visibleSize;
+	virtual void onEnter();
+
+	void addEdges();
+
+	void addBall(float positionX,float positionY);
+
+	Size visibleSize;
 
 	Vector<shootball*> balls;
+
 };
 
 #endif // __HELLOWORLD_SCENE_H__
